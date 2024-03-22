@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFG_BM_COMPANYCODETOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFG_BM_COMPANYCODE</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFM_BM_CS_CCODE</FUNCNAME>
+     <SHORT_TEXT>function module</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZST_BM_V_T001_ADDRESS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIRET2_T</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Structure download template</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

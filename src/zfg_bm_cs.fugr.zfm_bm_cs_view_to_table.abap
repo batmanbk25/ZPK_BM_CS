@@ -1,0 +1,46 @@
+FUNCTION ZFM_BM_CS_VIEW_TO_TABLE.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  CHANGING
+*"     REFERENCE(CT_CS_MAP) TYPE  ZTT_BM_CS_MAP
+*"----------------------------------------------------------------------
+  DATA:
+    LT_TABNAME TYPE DDTABNAMES,
+    LT_TSTCP   TYPE TABLE OF TSTCP.
+
+  SORT CT_CS_MAP BY VIEWNAME.
+*  DELETE ADJACENT DUPLICATES FROM CT_CS_MAP COMPARING VIEWNAME.
+
+* Get table/view attributes
+  IF CT_CS_MAP IS NOT INITIAL.
+    SELECT TABNAME, TABCLASS, CLIDEP, MAINFLAG, T~VIEWCLASS, ROOTTAB
+      INTO TABLE @DATA(LT_VIEW_INFO)
+      FROM DD02L AS  T LEFT JOIN DD25L AS V
+        ON T~TABNAME  = V~VIEWNAME
+       AND T~AS4LOCAL = V~AS4LOCAL
+       AND T~AS4VERS  = V~AS4VERS
+       FOR ALL ENTRIES IN @CT_CS_MAP
+     WHERE T~AS4LOCAL = 'A'
+       AND T~TABNAME = @CT_CS_MAP-VIEWNAME.
+    SORT LT_VIEW_INFO BY TABNAME.
+  ENDIF.
+
+* Set transport attribute for view/table
+  LOOP AT CT_CS_MAP ASSIGNING FIELD-SYMBOL(<LF_CS_MAP>).
+    READ TABLE LT_VIEW_INFO INTO DATA(LS_VIEW_INFO)
+      WITH KEY TABNAME = <LF_CS_MAP>-VIEWNAME BINARY SEARCH.
+    IF SY-SUBRC IS INITIAL.
+      <LF_CS_MAP>-CLIDEP  = LS_VIEW_INFO-CLIDEP.
+
+*     If object is view, set root table for transport
+      IF LS_VIEW_INFO-TABCLASS = 'VIEW'.
+        <LF_CS_MAP>-TABNAME  = LS_VIEW_INFO-ROOTTAB.
+*     If object is table, set table for transport
+      ELSEIF LS_VIEW_INFO-TABCLASS = 'TRANSP'.
+        <LF_CS_MAP>-TABNAME  = LS_VIEW_INFO-TABNAME.
+        CLEAR: <LF_CS_MAP>-VIEWNAME.
+      ENDIF.
+    ENDIF.
+  ENDLOOP.
+
+ENDFUNCTION.

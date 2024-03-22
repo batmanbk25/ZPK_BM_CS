@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZSD_OBSOLETE</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>XFELD</DOMNAME>
+    <HEADLEN>10</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Customization of SD Input Help Entries</DDTEXT>
+    <REPTEXT>Hide in F4</REPTEXT>
+    <SCRTEXT_S>Hide in F4</SCRTEXT_S>
+    <SCRTEXT_M>Hide in Input Help</SCRTEXT_M>
+    <SCRTEXT_L>Hide Value in Input Help</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>D</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Anpassung von Einträgen in Eingabehilfe in SD</DDTEXT>
+     <REPTEXT>AusblendF4</REPTEXT>
+     <SCRTEXT_S>AusblendF4</SCRTEXT_S>
+     <SCRTEXT_M>InEingHilfe ausblend</SCRTEXT_M>
+     <SCRTEXT_L>Wert in Eingabehilfe ausblenden</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

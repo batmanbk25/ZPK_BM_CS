@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TOBJ" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <OBJH>
+    <OBJECTNAME>ZVC_BM_CSTR</OBJECTNAME>
+    <OBJECTTYPE>C</OBJECTTYPE>
+    <CLIDEP>X</CLIDEP>
+    <OBJCATEG>CUST</OBJCATEG>
+    <OBJTRANSP>2</OBJTRANSP>
+    <IMPORTABLE>3</IMPORTABLE>
+   </OBJH>
+   <OBJT>
+    <LANGUAGE>E</LANGUAGE>
+    <OBJECTNAME>ZVC_BM_CSTR</OBJECTNAME>
+    <OBJECTTYPE>C</OBJECTTYPE>
+    <DDTEXT>CS Transport</DDTEXT>
+   </OBJT>
+   <OBJS>
+    <OBJS>
+     <OBJECTNAME>ZVC_BM_CSTR</OBJECTNAME>
+     <OBJECTTYPE>C</OBJECTTYPE>
+     <TABNAME>ZTB_BM_CSTR_M</TABNAME>
+     <DDIC>X</DDIC>
+    </OBJS>
+    <OBJS>
+     <OBJECTNAME>ZVC_BM_CSTR</OBJECTNAME>
+     <OBJECTTYPE>C</OBJECTTYPE>
+     <TABNAME>ZVI_BM_CSTR_C</TABNAME>
+     <DDIC>X</DDIC>
+    </OBJS>
+   </OBJS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

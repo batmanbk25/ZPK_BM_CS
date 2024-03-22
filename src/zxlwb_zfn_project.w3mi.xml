@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_W3MI" serializer_version="v2.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <NAME>ZXLWB_ZFN_PROJECT</NAME>
+   <PARAMS>
+    <WWWPARAMS>
+     <RELID>MI</RELID>
+     <OBJID>ZXLWB_ZFN_PROJECT</OBJID>
+     <NAME>fileextension</NAME>
+    </WWWPARAMS>
+    <WWWPARAMS>
+     <RELID>MI</RELID>
+     <OBJID>ZXLWB_ZFN_PROJECT</OBJID>
+     <NAME>filename</NAME>
+     <VALUE>ZXLWB_ZFN_PROJECT</VALUE>
+    </WWWPARAMS>
+    <WWWPARAMS>
+     <RELID>MI</RELID>
+     <OBJID>ZXLWB_ZFN_PROJECT</OBJID>
+     <NAME>mimetype</NAME>
+     <VALUE>excel/xlsx</VALUE>
+    </WWWPARAMS>
+   </PARAMS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

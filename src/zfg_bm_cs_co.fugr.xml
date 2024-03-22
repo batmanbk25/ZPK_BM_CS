@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFG_BM_CS_COTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFG_BM_CS_CO</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFM_BM_CS_04_OKKP</FUNCNAME>
+     <SHORT_TEXT>04_OKKP</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZST_BM_CS_04_OKKP</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>04_OKKP</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_BM_CS_05_OKKP</FUNCNAME>
+     <SHORT_TEXT>05_OKKP</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZST_BM_SALES_05_OKKP</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>05_OKKP</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

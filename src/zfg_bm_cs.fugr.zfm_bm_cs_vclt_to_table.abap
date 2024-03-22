@@ -1,0 +1,51 @@
+FUNCTION ZFM_BM_CS_VCLT_TO_TABLE.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  CHANGING
+*"     REFERENCE(CT_CS_MAP) TYPE  ZTT_BM_CS_MAP
+*"----------------------------------------------------------------------
+  DATA:
+    LT_CS_MAP   TYPE  ZTT_BM_CS_MAP,
+    LS_CS_MAP_I TYPE  ZST_BM_CS_MAP,
+    LT_CS_MAP_I TYPE  ZTT_BM_CS_MAP.
+
+* Get View names from view cluster
+  IF CT_CS_MAP IS NOT INITIAL.
+    SELECT VCLNAME AS VCL_NAME OBJECT AS VIEWNAME
+      INTO CORRESPONDING FIELDS OF TABLE LT_CS_MAP
+      FROM VCLSTRUC
+       FOR ALL ENTRIES IN CT_CS_MAP
+     WHERE VCLNAME = CT_CS_MAP-VCL_NAME.
+    SORT LT_CS_MAP BY VCL_NAME.
+
+    LOOP AT CT_CS_MAP ASSIGNING FIELD-SYMBOL(<LF_CS_MAP>)
+      WHERE VCL_NAME IS NOT INITIAL.
+      READ TABLE LT_CS_MAP INTO DATA(LS_CS_MAP)
+        WITH KEY VCL_NAME = <LF_CS_MAP>-VCL_NAME BINARY SEARCH.
+      IF SY-SUBRC IS INITIAL.
+        LOOP AT LT_CS_MAP INTO LS_CS_MAP FROM SY-TABIX.
+          IF LS_CS_MAP-VCL_NAME <> <LF_CS_MAP>-VCL_NAME.
+            EXIT.
+          ENDIF.
+
+          IF <LF_CS_MAP>-VIEWNAME IS INITIAL.
+            <LF_CS_MAP>-VIEWNAME = LS_CS_MAP-VIEWNAME.
+          ELSE.
+            LS_CS_MAP_I = <LF_CS_MAP>.
+            LS_CS_MAP_I-VIEWNAME = LS_CS_MAP-VIEWNAME.
+            APPEND LS_CS_MAP_I TO LT_CS_MAP_I.
+          ENDIF.
+        ENDLOOP.
+      ENDIF.
+    ENDLOOP.
+  ENDIF.
+  APPEND LINES OF LT_CS_MAP_I TO CT_CS_MAP.
+  SORT CT_CS_MAP BY TCODE VCL_NAME VIEWNAME.
+
+* Get tables
+  CALL FUNCTION 'ZFM_BM_CS_VIEW_TO_TABLE'
+    CHANGING
+      CT_CS_MAP = CT_CS_MAP.
+
+
+ENDFUNCTION.

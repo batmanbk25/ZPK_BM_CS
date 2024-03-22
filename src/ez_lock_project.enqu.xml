@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENQU" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD25V>
+    <VIEWNAME>EZ_LOCK_PROJECT</VIEWNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <AGGTYPE>E</AGGTYPE>
+    <ROOTTAB>ZTB_BM_CSPJ_P</ROOTTAB>
+    <DDTEXT>LOCK PROJECT</DDTEXT>
+   </DD25V>
+   <DD26E_TABLE>
+    <DD26E>
+     <VIEWNAME>EZ_LOCK_PROJECT</VIEWNAME>
+     <TABNAME>ZTB_BM_CSPJ_P</TABNAME>
+     <TABPOS>0001</TABPOS>
+     <FORTABNAME>ZTB_BM_CSPJ_P</FORTABNAME>
+     <ENQMODE>E</ENQMODE>
+    </DD26E>
+   </DD26E_TABLE>
+   <DD27P_TABLE>
+    <DD27P>
+     <VIEWNAME>EZ_LOCK_PROJECT</VIEWNAME>
+     <OBJPOS>0001</OBJPOS>
+     <VIEWFIELD>MANDT</VIEWFIELD>
+     <TABNAME>ZTB_BM_CSPJ_P</TABNAME>
+     <FIELDNAME>MANDT</FIELDNAME>
+     <KEYFLAG>X</KEYFLAG>
+     <ENQMODE>E</ENQMODE>
+    </DD27P>
+    <DD27P>
+     <VIEWNAME>EZ_LOCK_PROJECT</VIEWNAME>
+     <OBJPOS>0002</OBJPOS>
+     <VIEWFIELD>PROJID</VIEWFIELD>
+     <TABNAME>ZTB_BM_CSPJ_P</TABNAME>
+     <FIELDNAME>PROJID</FIELDNAME>
+     <KEYFLAG>X</KEYFLAG>
+     <ENQMODE>E</ENQMODE>
+    </DD27P>
+   </DD27P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

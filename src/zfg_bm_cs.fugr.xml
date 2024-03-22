@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Customizing Data</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFG_BM_CSF01</SOBJ_NAME>
+    <SOBJ_NAME>LZFG_BM_CSTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFG_BM_CS</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>CONVERSION_EXIT_ZCSFS_INPUT</FUNCNAME>
+     <SHORT_TEXT>All display fix values</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>INPUT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ANY</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OUTPUT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ANY</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>INPUT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OUTPUT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>CONVERSION_EXIT_ZCSFS_OUTPUT</FUNCNAME>
+     <SHORT_TEXT>All display fix values</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>INPUT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ANY</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OUTPUT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ANY</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>INPUT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OUTPUT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_BM_CS_COLLECT_KEYS</FUNCNAME>
+     <SHORT_TEXT>Collect keys</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IT_CSFUNC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_BM_CSTR_C</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_CS_MAP</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_BM_CS_MAP</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_CSTR_K</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_BM_CSTR_K</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_CSFUNC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CS Transport: Function</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_CS_MAP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CS Mapping</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_CSTR_K</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CS transport: Keys</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_BM_CS_EXCEL_UPLOAD</FUNCNAME>
+     <SHORT_TEXT>NOTRANSL: Dekodierung EXCEL Format in SAP Datenformat</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_FIELD_SEPERATOR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR01</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_LINE_HEADER</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>I</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_FILENAME</PARAMETER>
+       <DBFIELD>RLGRAP-FILENAME</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_STEP</PARAMETER>
+       <DEFAULT>1</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>I</TYP>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CT_DATA_RAW</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_BM_CS_DATA_RAW</TYP>
+      </RSCHA>
+     </CHANGING>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>CONVERSION_FAILED</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_FIELD_SEPERATOR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character Field Length 1</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_LINE_HEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Header Line</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_FILENAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Local file for upload/download</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_STEP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steps for progress indicator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_DATA_RAW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Customizing Raw Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CONVERSION_FAILED</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_BM_CS_TCODE_TO_TABLE</FUNCNAME>
+     <SHORT_TEXT>Get table from Tcode</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CT_CS_MAP</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_BM_CS_MAP</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CT_CS_MAP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CS Mapping</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_BM_CS_VCLT_TO_TABLE</FUNCNAME>
+     <SHORT_TEXT>Get table from view cluster</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CT_CS_MAP</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_BM_CS_MAP</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CT_CS_MAP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CS Mapping</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_BM_CS_VIEW_TO_TABLE</FUNCNAME>
+     <SHORT_TEXT>Get table from view</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CT_CS_MAP</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_BM_CS_MAP</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CT_CS_MAP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CS Mapping</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

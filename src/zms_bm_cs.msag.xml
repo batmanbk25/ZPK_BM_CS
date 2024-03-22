@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMS_BM_CS</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Cu</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMS_BM_CS</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>File name &quot;&amp;1&quot; does not exists</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMS_BM_CS</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Filed name &quot;&amp;1&quot; does not exists</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMS_BM_CS</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Status Completed cannot be apply</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMS_BM_CS</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Total Confirmed Yield Quantity not more than Total Order Quantity!</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>
